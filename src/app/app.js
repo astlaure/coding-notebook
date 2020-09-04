@@ -5,6 +5,8 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 const csurf = require('csurf');
+const i18nMiddleware = require('../i18n/i18n.middleware');
+const i18nHelperMiddleware = require('../i18n/i18n-helper.middleware');
 const config = require('../config/config');
 const security = require('../security/security');
 const appRouter = require('./app.router');
@@ -24,6 +26,8 @@ app.use(cookieSession({ secret: config.secret }));
 app.use(security.initialize());
 app.use(security.session());
 app.use(csurf());
+app.use(i18nMiddleware);
+app.use(i18nHelperMiddleware);
 
 app.use(express.static(path.resolve(process.cwd(), 'public')));
 app.use(appRouter);
