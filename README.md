@@ -32,6 +32,7 @@ dependency to have i18n texts
 
 multer
 --sharp
+mmmagic
 cookie-parser
 
 ## Template languages
@@ -43,3 +44,23 @@ cookie-parser
 ## TODO
 
 check blocks and extend helpers
+
+
+## Features
+
+1. i18n
+1. database ORM
+1. context path
+1. templating
+1. logs
+1. database migrations
+1. env config
+1. authentication
+1. security tooling
+1. tests
+1. tests coverage
+
+## Features TODO
+
+1. upload files
+1. validate file type

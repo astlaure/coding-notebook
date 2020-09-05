@@ -2,5 +2,20 @@
     "index": {
         "title": "Coding Notebook",
         "subtitle": "Website to gather all my coding knowledge"
+    },
+    "security": {
+        "login": {
+            "username": "Username",
+            "password": "Password",
+            "submit": "Send"
+        }
+    },
+    "posts": {
+        "create": {
+            "topic": "Topic",
+            "architecture": "Architecture",
+            "body": "Body",
+            "submit": "Save"
+        }
     }
 }

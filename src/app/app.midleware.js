@@ -1,15 +1,14 @@
 const config = require('../config/config');
 
 /**
+ * Middleware to add default values to the locals for the templates
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  * @param {import('express').NextFunction} next
  */
-const authenticationMiddleware = (req, res, next) => {
-    if (req.isUnauthenticated()) {
-        return res.redirect(`${config.base}/login`);
-    }
+const appMiddleware = (req, res, next) => {
+    res.locals.base = config.base || '/';
     return next();
 };
 
-module.exports = authenticationMiddleware;
+module.exports = appMiddleware;

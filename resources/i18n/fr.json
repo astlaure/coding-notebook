@@ -2,5 +2,20 @@
     "index": {
         "title": "Coding Notebook",
         "subtitle": "Site web pour retrouver toutes mes connaissances en web."
+    },
+    "security": {
+        "login": {
+            "username": "Nom d'utilisateur",
+            "password": "Mot de passe",
+            "submit": "Envoyer"
+        }
+    },
+    "posts": {
+        "create": {
+            "topic": "Sujet",
+            "architecture": "Architecture",
+            "body": "Corps",
+            "submit": "Sauvegarder"
+        }
     }
 }

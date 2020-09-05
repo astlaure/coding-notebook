@@ -8,10 +8,13 @@ const uglify = require('gulp-uglify');
 const copyTask = (callback) => {
     gulp.src([
         './node_modules/bootstrap/dist/css/bootstrap.min.*',
+        './node_modules/easymde/dist/easymde.min.css',
+        './node_modules/highlight.js/styles/atom-one-dark.css',
     ]).pipe(gulp.dest('./public/css'));
     gulp.src([
         './node_modules/bootstrap/dist/js/bootstrap.bundle.min.*',
         './node_modules/jquery/dist/jquery.min.*',
+        './node_modules/easymde/dist/easymde.min.js',
     ]).pipe(gulp.dest('./public/js'));
     callback();
 };
