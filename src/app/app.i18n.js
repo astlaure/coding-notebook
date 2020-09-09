@@ -14,9 +14,10 @@ i18next
         detection: {
             order: ['querystring', 'cookie'],
             caches: ['cookie'],
+            lookupQuerystring: 'lang',
         },
         backend: {
-            loadPath: path.resolve(process.cwd(), 'resources/i18n/{{lng}}.json'),
+            loadPath: path.resolve(process.cwd(), 'resources/locales/{{lng}}.json'),
         },
     });
 

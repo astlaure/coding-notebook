@@ -6,10 +6,11 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const csurf = require('csurf');
-const i18nMiddleware = require('../i18n/i18n.middleware');
+const i18nextMiddleware = require('i18next-http-middleware');
 const config = require('../config/config');
 const security = require('../security/security');
 const appRouter = require('./app.router');
+const i18n = require('./app.i18n');
 const securityRouter = require('../security/security.router');
 const appMiddleware = require('./app.midleware');
 const layoutHelper = require('../helpers/layout.helper');
@@ -40,7 +41,7 @@ app.use(security.session());
 app.use(photoMiddleware.single('photo'));
 app.use(csurf());
 
-app.use(i18nMiddleware);
+app.use(i18nextMiddleware.handle(i18n));
 app.use(appMiddleware);
 
 app.use(config.base, express.static(path.resolve(process.cwd(), 'public')));
